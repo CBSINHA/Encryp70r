@@ -68,6 +68,7 @@ java -version
 
 ### 1. Clone Repository
 git clone https://github.com/CBSINHA/Encryp70r.git
+
 cd Encryp70r
 
 
@@ -75,7 +76,9 @@ cd Encryp70r
 
 ### 2. Compile
 cd src
+
 javac *.java
+
 cd ..
 
 
