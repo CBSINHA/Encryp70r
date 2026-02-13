@@ -69,23 +69,19 @@ java -version
 ### 1. Clone Repository
 git clone https://github.com/CBSINHA/Encryp70r.git
 
-cd Encryp70r
 
 
 ---
 
 ### 2. Compile
-cd src
 
-javac *.java
-
-cd ..
+javac -d . Encryp70r/src/*.java
 
 
 ---
 
 ### 3. Encrypt a File
-java -cp . src.Encryp70r encrypt filename.txt
+java src.Encryp70r encrypt <filename/filepath>
 
 
 You will be prompted to enter and confirm password securely.
