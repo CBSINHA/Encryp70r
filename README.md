@@ -87,17 +87,17 @@ java src.Encryp70r encrypt <filename/filepath>
 You will be prompted to enter and confirm password securely.
 
 Output:
-filename.txt.enc
+filename.enc
 
 
 ---
 
 ### 4. Decrypt a File
-java -cp . src.Encryp70r decrypt filename.txt.enc
+java -cp . src.Encryp70r decrypt filename.enc
 
 
 Output:
-filename.txt
+filename
 
 
 ---
