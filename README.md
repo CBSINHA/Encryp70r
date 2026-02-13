@@ -1,12 +1,49 @@
 # 🔐 Encryp70r – Secure File Encryption Tool (Java)
 
+A secure Java-based file encryption CLI tool implementing AES-256-GCM authenticated encryption and PBKDF2 key derivation.
+
+
 ## Overview
 **Encryp70r** is a secure, password-based file encryption tool built in Java using modern cryptographic standards.
 
 It allows encryption and decryption of **any file type** (documents, images, videos, executables, etc.) using strong authenticated encryption.  
 The tool is terminal-based, lightweight, and cross-platform (Windows, Linux, macOS).
 
-Built with security-first practices such as strong key derivation, tamper detection, and safe password handling, Encryp70r ensures confidentiality and integrity of user data.
+Designed using security-focused development practices such as strong key derivation, tamper detection, and safe password handling, Encryp70r ensures confidentiality and integrity of user data.
+
+---
+## 🎯 Motivation behind this tool
+I built this tool to understand real-world cryptographic file protection and implement secure password-based encryption using modern Java cryptography practices.
+
+---
+
+## 🧩 Technical Highlights
+- Implemented AES-256-GCM authenticated encryption
+- Designed custom encrypted file format with header validation
+- Implemented secure key derivation using PBKDF2
+- Stream-based file encryption for large file support
+- Built fully in Java using javax.crypto libraries
+
+
+---
+
+
+## 📸 Demo
+Below are sample runs demonstrating encryption, decryption, and tamper detection.
+
+### 🔐 Encryption Demo
+![Encryption Demo](screenshots/encrypt-command.png)
+![](screenshots/encrypt-result.png)
+
+
+### 🔓 Decryption Demo
+![Decryption Demo](screenshots/decrypt-command.png)
+![](screenshots/decrypt-result.png)
+
+
+### 🛡 Tamper Detection
+![Wrong Password](screenshots/error.png)
+
 
 ---
 
@@ -52,6 +89,18 @@ This ensures file validation, corruption detection, and secure decryption.
 
 ---
 
+## 📂 Project Structure
+
+```
+src/
+ ├── Encryp70r.java      # CLI entry point
+ ├── CryptoEngine.java   # encryption/decryption logic
+ ├── FileFormat.java     # encrypted file structure
+ └── Utils.java          # secure password handling
+```
+
+
+---
 
 ## ⚙ Requirements
 - Java JDK 11 or higher
@@ -67,7 +116,7 @@ java -version
 ## 🚀 How To Use
 
 ### 1. Clone Repository
-git clone https://github.com/CBSINHA/Encryp70r.git
+`git clone https://github.com/CBSINHA/Encryp70r.git`
 
 
 
@@ -75,29 +124,29 @@ git clone https://github.com/CBSINHA/Encryp70r.git
 
 ### 2. Compile
 
-javac -d . Encryp70r/src/*.java
+`javac -d . Encryp70r/src/*.java`
 
 
 ---
 
 ### 3. Encrypt a File
-java src.Encryp70r encrypt <filename/filepath>
+`java src.Encryp70r encrypt <file>`
 
 
 You will be prompted to enter and confirm password securely.
 
 Output:
-filename.enc
+file.enc
 
 
 ---
 
 ### 4. Decrypt a File
-java -cp . src.Encryp70r decrypt filename.enc
+`java src.Encryp70r decrypt file.enc`
 
 
 Output:
-filename
+file
 
 
 ---
@@ -118,6 +167,17 @@ filename
 - Works for all file types
 - Supports large files
 - Encrypted files use `.enc` extension
+
+---
+
+
+## ⚠ Disclaimer
+This tool is built for educational and personal file security purposes. 
+Not intended for production-grade enterprise security use.
+
+---
+
+If you found this project interesting, feel free to ⭐ the repository.
 
 ---
 
